@@ -47,7 +47,7 @@ cards.forEach(card => {
 });
 console.log("VoltNexus Connected!");
 
-supabase.auth.getSession().then(({ data, error }) => {
+client.auth.getSession().then(({ data, error }) => {
     if (error) {
         console.error("Supabase Error:", error);
     } else {
