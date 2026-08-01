@@ -206,3 +206,46 @@ margin-bottom:10px;
 .stat p{
 color:#d1d5db;
 }
+/* Login */
+
+.login-box{
+
+width:350px;
+
+margin:100px auto;
+
+background:rgba(255,255,255,.08);
+
+padding:40px;
+
+border-radius:20px;
+
+text-align:center;
+
+backdrop-filter:blur(15px);
+
+}
+
+.login-box h1{
+
+color:#38bdf8;
+
+margin-bottom:20px;
+
+}
+
+.login-box input{
+
+width:100%;
+
+padding:15px;
+
+margin:12px 0;
+
+border:none;
+
+border-radius:10px;
+
+font-size:16px;
+
+}
