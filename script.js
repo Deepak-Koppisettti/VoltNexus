@@ -48,3 +48,12 @@ cards.forEach(card => {
         card.style.transform = "translateY(0) scale(1)";
     });
 });
+console.log("VoltNexus Connected!");
+
+supabase.auth.getSession().then(({ data, error }) => {
+    if (error) {
+        console.error("Supabase Error:", error);
+    } else {
+        console.log("Supabase Connected Successfully!", data);
+    }
+});
