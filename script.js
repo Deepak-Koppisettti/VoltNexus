@@ -10,6 +10,10 @@ const supabase = window.supabase.createClient(
     SUPABASE_URL,
     SUPABASE_KEY
 );
+// Your existing JavaScript starts here...
+// finction login() {
+// ...
+// }
 console.log("Welcome to VoltNexus");
 
 // Show welcome alert only once
