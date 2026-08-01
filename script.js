@@ -3,6 +3,13 @@
 // ==========================
 
 // Welcome message
+const SUPABASE_URL = "https://mgczlyneilinugdjdurx.supabase.co/rest/v1/";
+const SUPABASE_KEY = "sb_publishable_kdwiePDeiSubqM9mgRQptw_4cLGRgVc";
+
+const supabase = window.supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_KEY
+);
 console.log("Welcome to VoltNexus");
 
 // Show welcome alert only once
