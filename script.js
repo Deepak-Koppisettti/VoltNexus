@@ -4,7 +4,7 @@
 
 // Supabase Configuration
 const SUPABASE_URL = "https://mgczlyneilinugdjdurx.supabase.co";
-const SUPABASE_KEY = "YOUR_SUPABASE_PUBLISHABLE_KEY"; // Replace with your actual publishable key
+const SUPABASE_KEY = "sb_publishable_kdwiePDeiSubqM9mgRQptw_4cLGRgVc";
 
 const client = window.supabase.createClient(
     SUPABASE_URL,
@@ -32,6 +32,26 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+// Sign up a new user
+async function signUp(email, password) {
+  const { data, error } = await client.auth.signUp({
+    email,
+    password,
+  });
+
+  if (error) {
+    console.error("Signup error:", error.message);
+    document.getElementById("message").innerHTML = "Signup failed!";
+  } else {
+    console.log("Signup successful:", data);
+    document.getElementById("message").innerHTML = "Account created successfully!";
+
+    // Redirect after signup
+    setTimeout(() => {
+      window.location.href = "dashboard.html";
+    }, 1000);
+  }
+}
 
 // Card hover animation
 const cards = document.querySelectorAll(".card");
