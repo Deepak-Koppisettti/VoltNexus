@@ -2,9 +2,9 @@
 // VoltNexus JavaScript
 // ==========================
 
-// Welcome message
+// Supabase Configuration
 const SUPABASE_URL = "https://mgczlyneilinugdjdurx.supabase.co";
-const SUPABASE_KEY = "sb_publishable_kdwiePDeiSubqM9mgRQptw_4cLGRgVc";
+const SUPABASE_KEY = "YOUR_SUPABASE_PUBLISHABLE_KEY"; // Replace with your actual publishable key
 
 const client = window.supabase.createClient(
     SUPABASE_URL,
@@ -13,7 +13,7 @@ const client = window.supabase.createClient(
 
 console.log("Welcome to VoltNexus");
 
-// Show welcome alert only once
+// Show welcome message
 window.onload = function () {
     console.log("VoltNexus Loaded Successfully!");
 };
@@ -45,6 +45,8 @@ cards.forEach(card => {
         card.style.transform = "translateY(0) scale(1)";
     });
 });
+
+// Check Supabase connection
 console.log("VoltNexus Connected!");
 
 client.auth.getSession().then(({ data, error }) => {
@@ -54,3 +56,54 @@ client.auth.getSession().then(({ data, error }) => {
         console.log("Supabase Connected Successfully!", data);
     }
 });
+
+// ==========================
+// Signup
+// ==========================
+async function signup() {
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    const { error } = await client.auth.signUp({
+        email,
+        password
+    });
+
+    if (error) {
+        document.getElementById("message").innerHTML = error.message;
+    } else {
+        document.getElementById("message").innerHTML =
+            "Account created successfully! Please check your email.";
+    }
+}
+
+// ==========================
+// Login
+// ==========================
+async function login() {
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    const { error } = await client.auth.signInWithPassword({
+        email,
+        password
+    });
+
+    if (error) {
+        document.getElementById("message").innerHTML = error.message;
+    } else {
+        document.getElementById("message").innerHTML = "Login successful!";
+
+        setTimeout(() => {
+            window.location.href = "dashboard.html";
+        }, 1000);
+    }
+}
+
+// ==========================
+// Logout
+// ==========================
+async function logout() {
+    await client.auth.signOut();
+    window.location.href = "index.html";
+}
