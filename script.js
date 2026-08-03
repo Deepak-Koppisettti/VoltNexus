@@ -79,3 +79,6 @@ async function signup() {
     isSubmitting = false;
   }
 }
+async function signup() {
+  const { data, error } = await supabase.auth.signUp({
+    email: 'example@email
