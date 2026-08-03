@@ -81,4 +81,22 @@ async function signup() {
 }
 async function signup() {
   const { data, error } = await supabase.auth.signUp({
-    email: 'example@email
+    email:'deepakkoppisetti@gmail.com'
+// script.js
+async function signup() {
+  const { data, error } = await supabase.auth.signUp({
+    email: 'deepakkoppisetti@gmail.com',
+    password: 'Deepak99@#123',
+  });
+
+  if (error) {
+    // Specifically check for rate limit errors
+    if (error.status === 429) {
+      alert("Too many attempts. Please wait a few minutes before trying again.");
+    } else {
+      alert(error.message);
+    }
+    return;
+  }
+  // Proceed with successful signup
+}
