@@ -3,188 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>VoltNexus | Powering Future Electronics Engineers</title>
 
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
+<body>
 
+    <nav class="navbar">
+        <h1>⚡ VoltNexus</h1>
 
-    <body>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Courses</a>
+            <a href="#">Notes</a>
+            <a href="#">About</a>
+        </div>
+    </nav>
 
-<nav class="navbar">
+    <section class="login-section">
 
-    <h1>⚡ VoltNexus</h1>
+        <div class="login-card">
 
-    <div class="nav-links">
-        <a href="#">Home</a>
-        <a href="#">Courses</a>
-        <a href="#">Notes</a>
-        <a href="#">About</a>
-    </div>
+            <h2>Welcome Back</h2>
+            <p>Login to VoltNexus ECE Hub</p>
 
-</nav>
+            <input id="email" type="email" placeholder="Email Address">
 
+            <input id="password" type="password" placeholder="Password">
 
-<section class="login-section">
+            <button onclick="login()">Login</button>
 
-    <div class="login-card">
+            <button class="create-btn" onclick="signup()">
+                Create Account
+            </button>
 
-        <h2>Welcome Back</h2>
-        <p>Login to VoltNexus ECE Hub</p>
+            <p id="message"></p>
 
-        <input id="email" type="email" placeholder="Email Address">
+        </div>
 
-        <input id="password" type="password" placeholder="Password">
+    </section>
 
-        <button onclick="login()">Login</button>
+    <header>
 
-        <button class="create-btn" onclick="signup()">
-            Create Account
-        </button>
+        <div class="logo">⚡ VoltNexus</div>
 
-        <p id="message"></p>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="notes.html">Notes</a>
+            <a href="videos.html">Videos</a>
+            <a href="calculators.html">Calculators</a>
+            <a href="lab.html">Labs</a>
+            <a href="jobs.html">Jobs</a>
+            <a href="contact.html">Contact</a>
+        </nav>
 
-    </div>
+    </header>
 
-</section>
+    <section class="hero">
 
+        <div class="hero-text">
 
-</body>
+            <h1>Powering Future Electronics Engineers</h1>
 
+            <p>Learn Electronics • Build Projects • Crack Placements • Master Core ECE</p>
 
+            <a href="notes.html" class="btn">Explore Notes</a>
 
-<header>
+            <a href="videos.html" class="btn2">Watch Videos</a>
 
-<div class="logo">
-⚡ VoltNexus
-</div>
+        </div>
 
-<nav>
+    </section>
 
-<a href="index.html">Home</a>
+    <section class="features">
 
-<a href="notes.html">Notes</a>
+        <h2>Explore VoltNexus</h2>
 
-<a href="videos.html">Videos</a>
+        <div class="cards">
 
-<a href="calculators.html">Calculators</a>
+            <div class="card">
+                <h3>📚 Notes</h3>
+                <p>Semester-wise ECE notes with PDF downloads.</p>
+                <a href="notes.html" class="btn">Open</a>
+            </div>
 
-<a href="lab.html">Labs</a>
+            <div class="card">
+                <h3>🎥 Video Tutorials</h3>
+                <p>Watch ECE concepts from top educators.</p>
+                <a href="videos.html" class="btn">Watch</a>
+            </div>
 
-<a href="jobs.html">Jobs</a>
+            <div class="card">
+                <h3>🧮 Calculators</h3>
+                <p>Ohm's Law, Power, Binary & more.</p>
+                <a href="calculators.html" class="btn">Use</a>
+            </div>
 
-<a href="contact.html">Contact</a>
+        </div>
 
-</nav>
+    </section>
 
-</header>
+    <footer>
+        © 2026 VoltNexus • Designed by Deepak Koppisetti
+    </footer>
 
-<section class="hero">
-
-<div class="hero-text">
-
-<h1>Powering Future Electronics Engineers</h1>
-
-<p>
-
-Learn Electronics • Build Projects • Crack Placements • Master Core ECE
-
-</p>
-
-<a href="notes.html" class="btn">
-
-Explore Notes
-
-</a>
-
-<a href="videos.html" class="btn2">
-
-Watch Videos
-
-</a>
-
-</div>
-
-</section>
-
-<section class="features">
-
-<h2>Explore VoltNexus</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>📚 Notes</h3>
-<p>Semester-wise ECE notes with PDF downloads.</p>
-<a href="notes.html" class="btn">Open</a>
-</div>
-
-<div class="card">
-<h3>🎥 Video Tutorials</h3>
-<p>Watch ECE concepts from top educators.</p>
-<a href="videos.html" class="btn">Watch</a>
-</div>
-
-<div class="card">
-<h3>🧮 Calculators</h3>
-<p>Ohm's Law, Power, Binary & more.</p>
-<a href="calculators.html" class="btn">Use</a>
-</div>
-
-<div class="card">
-<h3>🔬 Virtual Labs</h3>
-<p>Practice Digital Electronics & Embedded.</p>
-<a href="lab.html" class="btn">Start</a>
-</div>
-
-<div class="card">
-<h3>💼 Jobs</h3>
-<p>Latest ECE jobs and internships.</p>
-<a href="jobs.html" class="btn">View</a>
-</div>
-
-<div class="card">
-<h3>🤖 AI Assistant</h3>
-<p>Ask engineering questions anytime.</p>
-<a href="#" class="btn">Coming Soon</a>
-</div>
-
-</div>
-
-</section>
-<section class="stats">
-
-<div class="stat">
-<h2>500+</h2>
-<p>ECE Notes</p>
-</div>
-
-<div class="stat">
-<h2>200+</h2>
-<p>Video Tutorials</p>
-</div>
-
-<div class="stat">
-<h2>50+</h2>
-<p>Engineering Calculators</p>
-</div>
-
-<div class="stat">
-<h2>1000+</h2>
-<p>Students</p>
-</div>
-
-</section>
-
-<footer>
-    © 2026 VoltNexus • Designed by Deepak Koppisetti
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
 
 </body>
 </html>
