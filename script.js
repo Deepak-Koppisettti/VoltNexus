@@ -57,3 +57,25 @@ async function logout() {
     await client.auth.signOut();
     window.location.href = "index.html";
 }
+let isSubmitting = false;
+
+async function signup() {
+  if (isSubmitting) return;
+  isSubmitting = true;
+
+  try {
+    const { data, error } = await supabase.auth.signUp({
+      email: document.getElementById("email").value,
+      password: document.getElementById("password").value,
+    });
+
+    if (error) {
+      console.error(error.message);
+      alert("Signup failed: " + error.message);
+    } else {
+      alert("Signup successful!");
+    }
+  } finally {
+    isSubmitting = false;
+  }
+}
